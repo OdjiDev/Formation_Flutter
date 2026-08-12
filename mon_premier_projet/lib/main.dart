@@ -1,8 +1,7 @@
 // lib/main.dart
-
-import 'package:catalogue_produits/ui/pages/home.page.dart';
-import 'package:catalogue_produits/ui/pages/meteo.page.dart';
 import 'package:flutter/material.dart';
+import 'package:mon_premier_projet/ui/pages/home.page.dart';
+import 'package:mon_premier_projet/ui/pages/meteo.page.dart';
 
 
 void main() {
