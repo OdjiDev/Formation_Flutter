@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:mon_premier_projet/ui/pages/home.page.dart';
 import 'package:mon_premier_projet/ui/pages/meteo.page.dart';
-
+import 'package:mon_premier_projet/ui/pages/counter.page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/home": (context) => HomePage(),
         "/meteo": (context) => MeteoPage(),
+        "/counter": (context) => CounterPage(),
       },
       theme: ThemeData(
         primarySwatch: Colors.grey, // Color.fromARGB(255, 97, 104, 110),

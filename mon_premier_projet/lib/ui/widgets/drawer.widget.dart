@@ -29,6 +29,14 @@ class MyDrawer extends StatelessWidget {
               Navigator.pushNamed(context,"/meteo");
             },
           ),
+           ListTile(
+            title: Text('counter'),
+            onTap: () {
+
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context,"/counter");
+            },
+          ),
         ],
       ),
     );
