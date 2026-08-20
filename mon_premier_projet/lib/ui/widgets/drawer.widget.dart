@@ -11,7 +11,13 @@ class MyDrawer extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.grey,
             ),
-            child: Text('Menu'),
+            child:Center(
+              child:CircleAvatar(
+                backgroundImage: AssetImage("assets/images/logo.png"),
+                radius: 40,
+            )
+            ),
+            //child: Text('Menu'),
           ),
           ListTile(
             title: Text('Home'),
@@ -37,7 +43,15 @@ class MyDrawer extends StatelessWidget {
               Navigator.pushNamed(context,"/counter");
             },
           ),
-        ],
+    ListTile(
+    title: Text('Saisie'),
+    onTap: () {
+
+    Navigator.of(context).pop();
+    Navigator.pushNamed(context,"/saisie");
+    },
+    ),
+    ],
       ),
     );
   }

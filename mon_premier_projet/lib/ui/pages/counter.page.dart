@@ -27,8 +27,9 @@ int counter=0;
       ),
 
     floatingActionButton: Row(
-      //crossAxisAlignment: CrossAxisAlignment.end,
-      mainAxisAlignment: MainAxisAlignment.end,
+      //crossAxisAlignment: CrossAxisAlignment.end,// Align the buttons to the bottom
+     // mainAxisAlignment: MainAxisAlignment.end, // Align the buttons to the right
+
       children: [
         FloatingActionButton (
           onPressed: (){
