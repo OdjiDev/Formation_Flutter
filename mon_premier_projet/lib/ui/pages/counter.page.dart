@@ -26,15 +26,33 @@ int counter=0;
 
       ),
 
-    floatingActionButton: FloatingActionButton(
-      onPressed: (){
-       setState(() {
-         counter++;
-       });
-        print('counter value  => $counter');
-      },
-      child: Icon(Icons.add),
+    floatingActionButton: Row(
+      //crossAxisAlignment: CrossAxisAlignment.end,
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        FloatingActionButton (
+          onPressed: (){
+            setState(() {
+              counter++;
+            });
+            print('counter value  => $counter');
+          },
+          child: Icon(Icons.add),
+        ),
+       SizedBox(width: 10,),
+        FloatingActionButton (
+          onPressed: (){
+            setState(() {
+              counter--;
+            });
+            print('counter value  => $counter');
+          },
+          child: Icon(Icons.remove),
+        ),
+      ]
     ),
     );
   }
+    
+      
 }
