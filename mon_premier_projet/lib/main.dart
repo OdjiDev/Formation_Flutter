@@ -1,5 +1,11 @@
+// lib/main.dart
 import 'package:flutter/material.dart';
-
+import 'package:mon_premier_projet/ui/pages/home.page.dart';
+import 'package:mon_premier_projet/ui/pages/meteo.page.dart';
+import 'package:mon_premier_projet/ui/pages/counter.page.dart';
+import 'package:mon_premier_projet/ui/pages/champsSaisie.page.dart';
+import 'package:mon_premier_projet/ui/pages/profil.page.dart';
+import 'package:mon_premier_projet/ui/pages/rowSaisi.page.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -9,66 +15,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+        "/home": (context) => HomePage(),
+        "/meteo": (context) => MeteoPage(),
+        "/counter": (context) => CounterPage(),
+        "/saisie": (context) => ChampsSaisie(),
+        "/profil": (context) => ProfilPage(),
+        "/rowSaisi":(context) => Rowsaisi(),
+      },
       theme: ThemeData(
         primarySwatch: Colors.grey, // Color.fromARGB(255, 97, 104, 110),
         useMaterial3: false, //Il est true par defaut sur la version recente de fluteur
-        
-      ),  
-      home:HomePage(),
-    );
-  }
-  
-}
-class HomePage extends StatelessWidget {
-    const HomePage({super.key});
 
-    @override
-
-    Widget build(BuildContext context) {
-      return Scaffold(
-        drawer:MyDrawer(),
-        appBar: AppBar(
-          title: Text('home'),
-        ),
-        body: const Center(
-          child: Text('Hello, World!',
-          style: TextStyle(
-            color: Colors.red,fontSize: 24),),
-        
-        ),
-      );
-    }
-}
-class MyDrawer extends StatelessWidget {
-  const MyDrawer({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Drawer(
-      child: ListView(
-        children: [
-          DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.grey,
-            ),
-            child: Text('Menu'),
-          ),
-          ListTile(
-            title: Text('Item 1'),
-            onTap: () {
-              // Handle item 1 tap
-              Navigator.pop(context); // Close the drawer
-            },
-          ),
-          ListTile(
-            title: Text('Item 2'),
-            onTap: () {
-              // Handle item 2 tap
-              Navigator.pop(context); // Close the drawer
-            },
-          ),
-        ],
       ),
+      initialRoute:"/home"
     );
   }
-}
+
+
+
+  }
+
