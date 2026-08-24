@@ -29,7 +29,7 @@ class MyDrawer extends StatelessWidget {
           ),
           ListTile(
             title: Text('Meteo'),
-            onTap: () {
+          onTap: () {
 
               Navigator.of(context).pop();
               Navigator.pushNamed(context,"/meteo");
@@ -59,8 +59,22 @@ class MyDrawer extends StatelessWidget {
     Navigator.pushNamed(context,"/profil");
     },
     ),
-    ],
-      ),
+        ListTile(
+    title: Text('listeCours'),
+    onTap: () {
+
+    Navigator.of(context).pop();
+    Navigator.pushNamed(context,"/listeCours");
+    },
+    ),
+        ListTile(
+          title: Text('Quitter'),
+          onTap: () {
+            Navigator.of(context).pop();
+          },
+        ),
+      ],
+    ),
     );
   }
-}
+} 

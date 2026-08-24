@@ -1,10 +1,12 @@
 // lib/main.dart
 import 'package:flutter/material.dart';
 import 'package:mon_premier_projet/ui/pages/home.page.dart';
+import 'package:mon_premier_projet/ui/pages/listeCours.dart';
 import 'package:mon_premier_projet/ui/pages/meteo.page.dart';
 import 'package:mon_premier_projet/ui/pages/counter.page.dart';
 import 'package:mon_premier_projet/ui/pages/champsSaisie.page.dart';
 import 'package:mon_premier_projet/ui/pages/profil.page.dart';
+import 'package:mon_premier_projet/ui/pages/saisieRow.page.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -21,6 +23,8 @@ class MyApp extends StatelessWidget {
         "/counter": (context) => CounterPage(),
         "/saisie": (context) => ChampsSaisie(),
         "/profil": (context) => ProfilPage(),
+        "/saisieRow": (context) => Saisie(),
+        "/listeCours": (context) => ListeCoursPage(),
       },
       theme: ThemeData(
         primarySwatch: Colors.grey, // Color.fromARGB(255, 97, 104, 110),
