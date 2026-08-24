@@ -51,6 +51,14 @@ class MyDrawer extends StatelessWidget {
     Navigator.pushNamed(context,"/saisie");
     },
     ),
+    ListTile(
+    title: Text('profil'),
+    onTap: () {
+
+    Navigator.of(context).pop();
+    Navigator.pushNamed(context,"/profil");
+    },
+    ),
     ],
       ),
     );

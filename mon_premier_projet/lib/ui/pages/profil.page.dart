@@ -2,20 +2,22 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/drawer.widget.dart';
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class ProfilPage extends StatelessWidget {
+  const ProfilPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer:MyDrawer(),
       appBar: AppBar(
-        title: Text('home'),
+        title: Text('Mon profil'),
       ),
-      body: const Center(
-        child: Text(' YEES Hello, World!',
+      body: Center(
+        child: Text('Devopp',
           style: TextStyle(
               color: Colors.red,fontSize: 24),),
+      
+
 
       ),
     );

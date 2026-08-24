@@ -8,17 +8,26 @@ class ChampsSaisie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer:MyDrawer(),
-      appBar: AppBar(
-        title: Text('ChampsSaisie '),
-      ),
-      body: Center(
+      appBar: AppBar(title: const Text('Deux Champs de Texte')),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0), // Ajoute de la marge autour
         child: Column(
-          children:[
-            TextFormField(),
-                ],
-        )
-
+          children: const [
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Nom',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            SizedBox(height: 16), // Espace vertical entre les deux champs
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Prénom',
+                border: OutlineInputBorder(),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

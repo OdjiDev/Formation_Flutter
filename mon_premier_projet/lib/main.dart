@@ -4,6 +4,7 @@ import 'package:mon_premier_projet/ui/pages/home.page.dart';
 import 'package:mon_premier_projet/ui/pages/meteo.page.dart';
 import 'package:mon_premier_projet/ui/pages/counter.page.dart';
 import 'package:mon_premier_projet/ui/pages/champsSaisie.page.dart';
+import 'package:mon_premier_projet/ui/pages/profil.page.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -19,13 +20,14 @@ class MyApp extends StatelessWidget {
         "/meteo": (context) => MeteoPage(),
         "/counter": (context) => CounterPage(),
         "/saisie": (context) => ChampsSaisie(),
+        "/profil": (context) => ProfilPage(),
       },
       theme: ThemeData(
         primarySwatch: Colors.grey, // Color.fromARGB(255, 97, 104, 110),
         useMaterial3: false, //Il est true par defaut sur la version recente de fluteur
 
       ),
-      initialRoute:"/meteo"
+      initialRoute:"/home"
     );
   }
 
