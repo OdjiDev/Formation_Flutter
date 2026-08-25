@@ -1,38 +1,38 @@
-// lib/main.dart
 import 'package:flutter/material.dart';
-import 'package:mon_premier_projet/ui/pages/home.page.dart';
-import 'package:mon_premier_projet/ui/pages/meteo.page.dart';
-import 'package:mon_premier_projet/ui/pages/counter.page.dart';
-import 'package:mon_premier_projet/ui/pages/champsSaisie.page.dart';
-import 'package:mon_premier_projet/ui/pages/profil.page.dart';
-import 'package:mon_premier_projet/ui/pages/rowSaisi.page.dart';
+import 'package:mon_premier_projet/ui/pages/AddEditEtudiantPage.dart';
+import 'ui/pages/etudiants_page.dart';// Import de la page CRUD
+
 void main() {
-  runApp(const MyApp());
+  runApp(const MonAppCrud());
 }
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+
+class MonAppCrud extends StatelessWidget {
+  const MonAppCrud({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        "/home": (context) => HomePage(),
-        "/meteo": (context) => MeteoPage(),
-        "/counter": (context) => CounterPage(),
-        "/saisie": (context) => ChampsSaisie(),
-        "/profil": (context) => ProfilPage(),
-        "/rowSaisi":(context) => Rowsaisi(),
+        '/': (context) => const EtudiantsPage(),
+        '/addEtudiant': (context) => const AddEditEtudiantPage(),
+        '/editEtudiant': (context) => const AddEditEtudiantPage(),
       },
+      title: 'CRUD Étudiants Spring Boot',
+      debugShowCheckedModeBanner: false,
+      
+      // Configuration du thème
       theme: ThemeData(
-        primarySwatch: Colors.grey, // Color.fromARGB(255, 97, 104, 110),
-        useMaterial3: false, //Il est true par defaut sur la version recente de fluteur
-
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+        useMaterial3: true,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.indigo,
+          foregroundColor: Colors.white,
+          centerTitle: true,
+        ),
       ),
-      initialRoute:"/home"
+
+      // Définition de la page principale (CRUD Étudiants)
+     initialRoute: '/',
     );
   }
-
-
-
-  }
-
+}
