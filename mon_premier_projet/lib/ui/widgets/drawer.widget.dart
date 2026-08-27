@@ -20,7 +20,8 @@ class MyDrawer extends StatelessWidget {
             //child: Text('Menu'),
           ),
           ListTile(
-            title: Text('Home'),
+            leading: Icon(Icons.home),
+            title: Text('Home' ),
 
             onTap: () {
               Navigator.of(context).pop();
@@ -28,6 +29,7 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
+             leading: Icon(Icons.settings,color: Colors.blue,),
             title: Text('Meteo'),
             onTap: () {
 
@@ -36,6 +38,7 @@ class MyDrawer extends StatelessWidget {
             },
           ),
            ListTile(
+             leading: Icon(Icons.home),
             title: Text('counter'),
             onTap: () {
 
@@ -65,6 +68,12 @@ class MyDrawer extends StatelessWidget {
       onTap: (){
         Navigator.pushNamed(context, "/rowSaisi");
       }
+    ),
+    ListTile(
+      title: Text("cours"),
+      onTap: () {
+        Navigator.pushNamed(context, "/listCours");
+      },
     )
     ],
       ),

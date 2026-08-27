@@ -13,11 +13,21 @@ class ProfilPage extends StatelessWidget {
         title: Text('Mon profil'),
       ),
       body: Center(
-        child: Text('Devopp',
-          style: TextStyle(
-              color: Colors.red,fontSize: 24),),
-      
-
+        child: Column(
+          children: [
+            Image.asset(
+              'assets/images/histoire.jpeg',
+              fit: BoxFit.contain,
+              height: 180,
+            ),
+            Text("Gassama"),
+            SizedBox(height: 16,),
+            Text("Developpeur"),
+            ElevatedButton(onPressed:(){
+            Navigator.pushNamed(context, "/home");
+            }, child: Text("Connexion"))
+          ],
+        )
 
       ),
     );

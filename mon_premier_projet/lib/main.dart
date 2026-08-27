@@ -1,6 +1,7 @@
 // lib/main.dart
 import 'package:flutter/material.dart';
 import 'package:mon_premier_projet/ui/pages/home.page.dart';
+import 'package:mon_premier_projet/ui/pages/listCours.Page.dart';
 import 'package:mon_premier_projet/ui/pages/meteo.page.dart';
 import 'package:mon_premier_projet/ui/pages/counter.page.dart';
 import 'package:mon_premier_projet/ui/pages/champsSaisie.page.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         "/saisie": (context) => ChampsSaisie(),
         "/profil": (context) => ProfilPage(),
         "/rowSaisi":(context) => Rowsaisi(),
+        "/listCours":(context) => Listcours(),
       },
       theme: ThemeData(
         primarySwatch: Colors.grey, // Color.fromARGB(255, 97, 104, 110),
@@ -29,6 +31,7 @@ class MyApp extends StatelessWidget {
 
       ),
       initialRoute:"/home"
+      
     );
   }
 
