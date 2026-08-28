@@ -45,7 +45,7 @@ class ProposPage extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             const Text(
-              'DJIRE OUZAIROU',
+              'DJIRE OUZAIROU +22377915103',
               style: TextStyle(fontSize: 18, color: Colors.indigo),
             ),
             const Text('Ingenieur Informatique 2026'),
@@ -59,7 +59,7 @@ class ProposPage extends StatelessWidget {
                   context: context,
                   builder: (ctx) => const AlertDialog(
                     title: Text('Support'),
-                    content: Text('Contactez l\'enseignant responsable ou l\'administration.'),
+                    content: Text('Contactez l\'enseignant responsable ou l\'administration +22377915103 .'),
                   ),
                 );
               },

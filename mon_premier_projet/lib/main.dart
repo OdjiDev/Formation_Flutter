@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mon_premier_projet/ui/pages/ListCours.page.dart';
+import 'package:mon_premier_projet/ui/pages/passageExamen.page.dart';
 import 'package:mon_premier_projet/ui/pages/tachePage.dart';
 
 // Importation des pages (adaptez les dossiers si vos fichiers sont dans lib/pages)
-import 'ui/pages/home_page.dart';
-import 'ui/pages/cours_page.dart';
+import 'ui/pages/home.page.dart';
 import 'ui/pages/etudiants_page.dart';
 import 'ui/pages/parametres_page.dart';
 import 'ui/pages/propos_page.dart';
@@ -38,17 +39,19 @@ class MyApp extends StatelessWidget {
       // Déclaration des routes (doivent être identiques aux routes appelées dans le Drawer)
       routes: {
         '/': (context) => const HomePage(),
-        '/cours': (context) => const CoursPage(),
+       
         '/etudiants': (context) => const EtudiantsPage(),
         '/parametres': (context) => const ParametresPage(),
         '/propos': (context) => const ProposPage(),
         '/taches': (context) => const TachesPage(),
+        '/listCours': (context) => const ListCoursPage(),
+        '/examen': (context) => const PassageExamenPage(titreCours: 'Examen',),
       },
 
       // Sécurité : évite les plantages si une route n'est pas trouvée
       onUnknownRoute: (settings) {
         return MaterialPageRoute(
-          builder: (context) => const HomePage(),
+          builder: (context) => const ListCoursPage(),
         );
       },
     );

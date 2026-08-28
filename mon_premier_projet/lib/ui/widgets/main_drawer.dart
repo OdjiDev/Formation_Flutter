@@ -48,9 +48,16 @@ class MainDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.book),
-            title: const Text('Gestion des Cours'),
+            title: const Text(' Cours Terminale'),
             onTap: () {
-              Navigator.pushReplacementNamed(context, '/cours');
+              Navigator.pushReplacementNamed(context, '/listCours');
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.book),
+            title: const Text(' Examens'),
+            onTap: () {
+              Navigator.pushReplacementNamed(context, '/examen');
             },
           ),
           ListTile(
@@ -75,14 +82,8 @@ class MainDrawer extends StatelessWidget {
               Navigator.pushReplacementNamed(context, '/propos');
             },
           ),
-           const Divider(), // Ligne de séparation
-          ListTile(
-            leading: const Icon(Icons.contact_support),
-            title: const Text('counter'),
-            onTap: () {
-              Navigator.pushReplacementNamed(context, '/propos');
-            },
-          ),
+        
+          
             const Divider(), // Ligne de séparation
           ListTile(
             leading: const Icon(Icons.contact_support),
@@ -91,6 +92,9 @@ class MainDrawer extends StatelessWidget {
               Navigator.pushReplacementNamed(context, '/taches');
             },
           ),
+        
+         
+          
         ],
       ),
     );
