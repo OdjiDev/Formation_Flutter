@@ -75,6 +75,22 @@ class MainDrawer extends StatelessWidget {
               Navigator.pushReplacementNamed(context, '/propos');
             },
           ),
+           const Divider(), // Ligne de séparation
+          ListTile(
+            leading: const Icon(Icons.contact_support),
+            title: const Text('counter'),
+            onTap: () {
+              Navigator.pushReplacementNamed(context, '/propos');
+            },
+          ),
+            const Divider(), // Ligne de séparation
+          ListTile(
+            leading: const Icon(Icons.contact_support),
+            title: const Text('Taches'),
+            onTap: () {
+              Navigator.pushReplacementNamed(context, '/taches');
+            },
+          ),
         ],
       ),
     );

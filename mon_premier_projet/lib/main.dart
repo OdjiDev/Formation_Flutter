@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mon_premier_projet/ui/pages/tachePage.dart';
 
 // Importation des pages (adaptez les dossiers si vos fichiers sont dans lib/pages)
 import 'ui/pages/home_page.dart';
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
         '/etudiants': (context) => const EtudiantsPage(),
         '/parametres': (context) => const ParametresPage(),
         '/propos': (context) => const ProposPage(),
+        '/taches': (context) => const TachesPage(),
       },
 
       // Sécurité : évite les plantages si une route n'est pas trouvée

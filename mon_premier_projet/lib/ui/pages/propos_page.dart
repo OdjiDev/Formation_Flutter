@@ -29,7 +29,9 @@ class ProposPage extends StatelessWidget {
             ),
             const SizedBox(height: 30),
             const Text(
-              'Cette application a été développée dans le cadre du TP de Développement Mobile Flutter. Elle illustre la gestion du routage nommé, de la navigation par Drawer, et de l\'affichage de listes dynamiques.',
+              "Cette application a été développée dans le cadre du "
+             " TP de Développement Mobile Flutter. Elle illustre la gestion"
+             " du routage nommé, de la navigation par Drawer, et de l\'affichage de listes dynamiques.",
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 16, height: 1.5),
             ),
@@ -43,10 +45,10 @@ class ProposPage extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             const Text(
-              '[Votre Nom & Prénom]',
+              'DJIRE OUZAIROU',
               style: TextStyle(fontSize: 18, color: Colors.indigo),
             ),
-            const Text('Filière / Promotion 202X'),
+            const Text('Ingenieur Informatique 2026'),
             const SizedBox(height: 30),
             
             ElevatedButton.icon(
