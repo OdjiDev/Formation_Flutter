@@ -26,48 +26,17 @@ class MyDrawer extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.pushNamed(context,"/home");
             },
-          ),
+          ) ,
           ListTile(
-            title: Text('Meteo'),
+            title: Text('Categories'),
             onTap: () {
-
               Navigator.of(context).pop();
-              Navigator.pushNamed(context,"/meteo");
+              Navigator.pushNamed(context,"/categories");
             },
-          ),
-           ListTile(
-            title: Text('counter'),
-            onTap: () {
-
-              Navigator.of(context).pop();
-              Navigator.pushNamed(context,"/counter");
-            },
-          ),
-    ListTile(
-    title: Text('Saisie'),
-    onTap: () {
-
-    Navigator.of(context).pop();
-    Navigator.pushNamed(context,"/saisie");
-    },
-    ),
-    ListTile(
-    title: Text('profil'),
-    onTap: () {
-
-    Navigator.of(context).pop();
-    Navigator.pushNamed(context,"/profil");
-    },
-    ),
-    ListTile(
-      
-      title: Text("RowSaisi"),
-      onTap: (){
-        Navigator.pushNamed(context, "/rowSaisi");
-      }
-    )
-    ],
+          ) ,
+        ]
       ),
     );
-  }
+  
+}
 }

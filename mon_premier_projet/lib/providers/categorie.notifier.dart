@@ -1,8 +1,9 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'modele.dart';
-import 'categorie_service.dart';
 
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 // Classe d'état global pour gérer les données et les erreurs proprement
+import 'package:mon_premier_projet/models/categorie.model.dart';
+import 'package:mon_premier_projet/services/categorie.service.dart';
+
 class CategorieState {
   final List<Categorie> categories;
   final bool isLoading;

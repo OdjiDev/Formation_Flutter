@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'modele.dart';
-import 'drawer.widget.dart';
-import 'categorie.notifier.dart';
+import 'package:mon_premier_projet/models/categorie.model.dart';
+import 'package:mon_premier_projet/providers/categorie.notifier.dart';
+
+import '../../../providers/categorie.notifier.dart';
+
 
 class CategoriePage extends ConsumerWidget {
   const CategoriePage({super.key});
