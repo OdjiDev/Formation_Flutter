@@ -2,49 +2,40 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mon_premier_projet/core/security/api_client.dart';
+import 'package:mon_premier_projet/core/security/routes/app_router.dart';
 import 'package:mon_premier_projet/features/auth/pages/login_page.dart';
 import 'package:mon_premier_projet/features/categories/pages/categorie_page.dart';
 
-
+ // Import du fichier de routage centralisé
 void main() async {
   // Nécessaire si on fait des appels async (comme lire le secure storage) avant runApp
   WidgetsFlutterBinding.ensureInitialized();
 
-  // On vérifie si un token est déjà présent pour décider de la page d'accueil
-  final apiClient = ApiClient();
-  final bool isLogged = await apiClient.hasToken();
-
+  
   runApp(
   ProviderScope(
     // child:MyApp())
-    child: MyApp(isLoggedIn: isLogged),)
+    child: MyApp(),)
   );
 
 }
-class MyApp extends StatelessWidget {
-
-  final bool isLoggedIn;
-
-  const MyApp({super.key, required this.isLoggedIn});
-  // const MyApp({super.key});
+class MyApp extends ConsumerWidget {
+  const MyApp({super.key});
 
   @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    // On écoute le routerProvider défini dans core/routes/app_router.dart
+    final router = ref.watch(routerProvider);
 
-  Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Mon Application Spring Boot & Flutter',
-      
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.grey, // Color.fromARGB(255, 97, 104, 110),
-        useMaterial3: false, //Il est true par defaut sur la version recente de fluteur
-
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        useMaterial3: true,
       ),
-      // Si l'utilisateur a déjà un token valide, on va direct sur CategoriePage, sinon Login
-      home: isLoggedIn ? const CategoriePage() : const LoginPage(),
+      // On utilise MaterialApp.router à la place de MaterialApp classique
+      routerConfig: router,
     );
   }
-
-
-
-  }
-
+}
