@@ -1,9 +1,15 @@
 // lib/main.dart
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:mon_premier_projet/features/categories/pages/categorie_page.dart';
 
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+  ProviderScope(
+    child:MyApp())
+  );
+
 }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,6 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
+        '/categorie': (context) => const CategoriePage(),
       
     
         
@@ -21,7 +28,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: false, //Il est true par defaut sur la version recente de fluteur
 
       ),
-      initialRoute:"/"
+      initialRoute:"/categorie"
     );
   }
 
